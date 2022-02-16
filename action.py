@@ -30,8 +30,7 @@ def main():
 
     repository_url = repository.get("repositoryUri")
 
-    print(response)
-    print(f"::set-output name=repositry::{repository_url}")
+    print(f"::set-output name=repository::{repository_url}")
 
 
 if __name__ == "__main__":
