@@ -1,0 +1,43 @@
+name: "Create AWS ECR Repository"
+description: "Create AWS ECR Repository"
+author: "Epsy Engineering <engieering@epsyhealth.com>"
+
+inputs:
+#  access_key_id:
+#    description: The AWS access key id
+#    required: true
+#  aws_secret_access_key:
+#    description: The AWS secret access key
+#    required: true
+#  aws_session_token:
+#    description: The AWS session token
+#    required: false
+#  account_id:
+#    description: AWS Account ID
+#    required: true
+  name:
+    description: Name of your ECR repository
+    required: true
+  region:
+    description: The AWS region
+    required: true
+  image_tag_mutability:
+    default: "IMMUTABLE"
+    description: The tag mutability setting for the repository. If this parameter is omitted, the default setting of MUTABLE will be used which will allow image tags to be overwritten.
+    required: false
+  repo_policy:
+    description: Set reposiotry policy
+    default: ""
+    required: false
+  scan_on_push:
+    description: Set this to True if you want AWS to scan your images for vulnerabilities on push
+    default: false
+    required: false
+
+outputs:
+  repositry:
+    description: "ECR Repository"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
