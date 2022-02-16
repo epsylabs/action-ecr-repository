@@ -3,18 +3,6 @@ description: "Create AWS ECR Repository"
 author: "Epsy Engineering <engieering@epsyhealth.com>"
 
 inputs:
-#  access_key_id:
-#    description: The AWS access key id
-#    required: true
-#  aws_secret_access_key:
-#    description: The AWS secret access key
-#    required: true
-#  aws_session_token:
-#    description: The AWS session token
-#    required: false
-#  account_id:
-#    description: AWS Account ID
-#    required: true
   name:
     description: Name of your ECR repository
     required: true
