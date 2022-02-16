@@ -20,7 +20,8 @@ inputs:
     required: true
   region:
     description: The AWS region
-    required: true
+    default: us-east-1
+    required: false
   image_tag_mutability:
     default: "IMMUTABLE"
     description: The tag mutability setting for the repository. If this parameter is omitted, the default setting of MUTABLE will be used which will allow image tags to be overwritten.
